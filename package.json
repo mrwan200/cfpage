@@ -2,17 +2,22 @@
   "name": "cfpage",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "./build/index.js",
   "scripts": {
     "dev": "ts-node ./src/index.ts",
     "build": "tsc",
+    "build:install": "tsc && npm i -g .",
     "test": "node ./build/index.js"
   },
   "bin": {
     "cfpage": "./build/index.js"
   },
   "keywords": [],
-  "author": "M-307",
+  "author": {
+    "name": "M-307",
+    "email": "me@m307.dev",
+    "url": "https://m307.dev"
+  },
   "license": "MIT",
   "dependencies": {
     "args": "^5.0.3",
