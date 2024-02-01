@@ -1,6 +1,6 @@
 {
   "name": "cfpage",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple for deploy Cloudflare page with custom data in .env file",
   "main": "./build/index.js",
   "scripts": {
@@ -18,6 +18,10 @@
     "name": "M-307",
     "email": "me@m307.dev",
     "url": "https://m307.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrwan200/cfpage"
   },
   "license": "MIT",
   "dependencies": {
