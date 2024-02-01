@@ -9,11 +9,7 @@ I'm not cloudflared developer. I use code reference from repo [workers-sdk](http
 # Install
 
 ```
-npm install https://github.com/mrwan200/cfpage
-
-or
-
-yarn add https://github.com/mrwan200/cfpage
+npm i -g  https://github.com/mrwan200/cfpage
 ```
 
 ## How to use
