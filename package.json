@@ -1,14 +1,13 @@
 {
   "name": "cfpage",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple for deploy Cloudflare page with custom data in .env file",
   "main": "./build/index.js",
   "scripts": {
     "dev": "ts-node ./src/index.ts",
     "build": "tsc",
     "build:install": "tsc && npm i -g .",
-    "test": "node ./build/index.js",
-    "postinstall": "tsc"
+    "test": "node ./build/index.js"
   },
   "bin": {
     "cfpage": "./build/index.js"
