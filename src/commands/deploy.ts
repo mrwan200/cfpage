@@ -24,7 +24,7 @@ export async function deployCloudflarePage(
     try {
       await fs.readdir(outputFolder);
     } catch (e) {
-      console.log("😫 Can't open folder:", outputFolder);
+      return console.log("😫 Can't open folder:", outputFolder);
     }
 
     // Checking .env
