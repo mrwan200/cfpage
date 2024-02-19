@@ -43,7 +43,6 @@ cfpage-mac deploy ./dist
 ~~cfpage-linux deploy ./dist~~ (Still fixing)
 ### Windows
 ~~cfpage-win deploy ./dist~~ (Still fixing)
-```
 
 ## Enjoy!
 
