@@ -1,5 +1,9 @@
 node_modules
 src
+scripts
+dist
 test
 .env
 tsconfig.json
+sea-prep.blob
+sea-config.json

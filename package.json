@@ -1,16 +1,16 @@
 {
   "name": "cfpage",
-  "version": "0.0.4",
+  "version": "0.1.0-alpha.1",
   "description": "A simple for deploy Cloudflare page with custom data in .env file",
-  "main": "./build/index.js",
+  "main": "./src/index.ts",
   "scripts": {
     "dev": "ts-node ./src/index.ts",
-    "build": "tsc",
-    "build:install": "tsc && npm i -g .",
+    "build": "tsup ./src/index.ts",
+    "build:mac": "ncc build && bash ./scripts/buildMac.sh",
     "test": "node ./build/index.js"
   },
   "bin": {
-    "cfpage": "./build/index.js"
+    "cfpage-mac": "./bin/cfpage-mac"
   },
   "keywords": [],
   "author": {
@@ -24,9 +24,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "args": "^5.0.3",
     "blake3-wasm": "2.1.5",
     "cli-progress": "^3.12.0",
+    "commander": "^12.0.0",
     "dotenv": "^16.4.1",
     "mime": "^3.0.0",
     "minimatch": "^9.0.3",
@@ -34,10 +34,14 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@types/args": "^5.0.3",
     "@types/cli-progress": "^3.11.5",
     "@types/mime": "^3.0.4",
+    "@vercel/ncc": "^0.38.1",
     "ts-node": "^10.9.2",
+    "tsup": "^8.0.2",
     "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }

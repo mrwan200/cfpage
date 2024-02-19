@@ -36,6 +36,15 @@ Cloudflare page project name site
 ### CF_BRANCH
 Cloudflare page branch
 
+## Scripts
+### MacOSX 
+cfpage-mac deploy ./dist
+### Linux 
+~~cfpage-linux deploy ./dist~~ (Still fixing)
+### Windows
+~~cfpage-win deploy ./dist~~ (Still fixing)
+```
+
 ## Enjoy!
 
 ![IMG](https://media1.tenor.com/m/-DdP7PTL6r8AAAAC/furina-focalors.gif)
