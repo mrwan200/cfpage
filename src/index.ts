@@ -1,19 +1,26 @@
-#! /usr/bin/env node
-
-import args from "args";
+import { program } from "commander";
 import { deployCloudflarePage } from "./commands/deploy";
 
+
 // Init argument(s)
-args
+program
+  .name("Cloudflare page deploy")
+  .description(
+    "A simple for deploy Cloudflare page with custom data in .env file"
+  )
+  .version("0.1.0-alpha.1");
+
+// Command
+program
+  .command("deploy")
+  .description("Deploy project into Cloudflare page")
   .option(
-    "env",
+    "-e, --env",
     'Load config .env for get "CF_EMAIL", "CF_TOKEN" and "CF_PAGE_NAME"',
     ".env"
   )
-  .command(
-    "deploy",
-    "Deploy project into Cloudflare page",
-    deployCloudflarePage
+  .action((args, options) =>
+    deployCloudflarePage("deploy",  options.args, args)
   );
 
-args.parse(process.argv);
+program.parse();
