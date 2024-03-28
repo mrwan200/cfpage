@@ -7,6 +7,7 @@ import CloudflareAPI from "../services/api";
 
 const ENV_VALIDATE = z.object({
   CF_EMAIL: z.string().email(),
+  CF_ACCOUNT: z.string(),
   CF_TOKEN: z.string(),
   CF_PROJECT_NAME: z.string(),
   CF_BRANCH: z.string().optional(),
@@ -44,7 +45,8 @@ export async function deployCloudflarePage(
       // Init cloudflare
       const cf = new CloudflareAPI(
         parsed?.CF_EMAIL || "",
-        parsed?.CF_TOKEN || ""
+        parsed?.CF_TOKEN || "",
+        parsed?.CF_ACCOUNT || "",
       );
       // Load account first
       console.log(`⚡️  Getting account id....`);

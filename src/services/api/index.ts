@@ -12,10 +12,13 @@ export default class CloudflareAPI {
   private readonly api = "https://api.cloudflare.com/client/v4";
   private readonly email: string;
   private readonly token: string;
+  private readonly account: string;
+
   private accountId: string | null = null;
 
-  constructor(email: string, token: string) {
+  constructor(email: string, token: string, account: string) {
     this.email = email;
+    this.account = account;
     this.token = token;
   }
 
@@ -29,7 +32,7 @@ export default class CloudflareAPI {
     // Find user
     for (const account of resp?.result || []) {
       if (
-        account.name.toLowerCase().startsWith(this.email.toLocaleLowerCase())
+        account.name.toLowerCase().startsWith(this.account.toLocaleLowerCase())
       ) {
         // Replace it
         this.accountId = account.id;
